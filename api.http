@@ -1,0 +1,39 @@
+
+### Recuperar todas las rutas
+GET http://localhost:3000/api/routes
+
+### Recuperar por ID
+GET http://localhost:3000/api/routes/6a3b7bfa0425ec06c0a62910
+
+### Crear ruta
+POST http://localhost:3000/api/routes
+Content-Type: application/json
+
+{
+  "numero": 211,
+  "nombre": "Ruta 211",
+  "secciones": [
+    {
+      "nombre_seccion": "Oeste (Desde Ciudad Vetusta)",
+      "clima_especial": "Normal"
+    },
+    {
+      "nombre_seccion": "Este (Desde Pueblo Celestic)",
+      "clima_especial": "Normal"
+    }
+  ],
+  "movimientos_progresion": ["Golpe Roca", "Fuerza"],
+  "niveles_elevacion": 2,
+  "items_disponibles": [
+    {
+      "nombre": "MT13 Rayo Hielo",
+      "movimiento_necesario": "Treparrocas",
+      "requiere_elevacion": true
+    },
+    {
+      "nombre": "Cuerda Huida",
+      "movimiento_necesario": "Ninguno",
+      "requiere_elevacion": false
+    }
+  ]
+}
