@@ -10,7 +10,7 @@ const itemSchema = new mongoose.Schema(
       type: String,
       default: "Ninguno",
     },
-    require_elevacion: {
+    requiere_elevacion: {
       type: Boolean,
       default: false,
     },
@@ -40,11 +40,11 @@ const rutaSchema = new mongoose.Schema(
         type: String,
       },
     ],
-    nivles_elevacion: {
+    niveles_elevacion: {
       type: Number,
       default: 1,
     },
-    itemSchema_disponibles: [itemSchema],
+    items_disponibles: [itemSchema],
   },
   { timestamps: true },
 );

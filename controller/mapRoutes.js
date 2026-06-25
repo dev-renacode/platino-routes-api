@@ -4,7 +4,8 @@ import { mapRoutesModel } from "../model/mapRoutes.js";
 export class mapRoutesController {
   static getAll = async (req, res) => {
     try {
-      const data = await mapRoutesModel.getAll();
+      const filters = req.query;
+      const data = await mapRoutesModel.getAll({ filters });
       return res.status(200).json(data);
     } catch (e) {
       res.status(500).json({ message: e.message });

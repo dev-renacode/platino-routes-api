@@ -1,7 +1,10 @@
 import mapRoutes from "../schemas/mapRoutes.js";
 
 export class mapRoutesModel {
-  static getAll = async () => {
+  static getAll = async ({ filters }) => {
+    if (filters) {
+      return await mapRoutes.find(filters);
+    }
     return await mapRoutes.find();
   };
 
